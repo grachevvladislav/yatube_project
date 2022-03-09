@@ -1,10 +1,9 @@
-from django.urls import path
-
 from . import views
+from django.urls import path
 
 urlpatterns = [
     # Главная страница
     path('', views.index),
-    path('group/', views.groups_list()),
-    path('group/<slug:slug>/', views.posts()),
+    path('group/', views.group_posts),
+    path('group/<slug:any_slug>/', views.posts),
 ]
